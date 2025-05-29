@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container" id="container"></div>
+    <form>
+      <label>Nome</label>
+        <input type="text" id="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email"  required>
+        <label >Senha</label>
+        <input type="password" id="password" required>
+        <button onclick="Registro()">Entrar</button>
+
+
+    </form>
+    <script>
+        function Registro(){
+            var name = document
+            var email = document.getElementyById('email').valued;
+            var password = document.getElementyById('password').valued;
+            
+            var div = document.getElementById('container');
+            localStorage.getItem('name', name);
+            localStorage.getItem('email', email);
+            localStorage.getItem('password', password);
+            alert("Email: " + email + "Senha: " + password);
+      
+          
+
+            window.location.href = "login.html";
+        }
+    </script>
+</body>
+</html>
